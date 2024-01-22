@@ -3,6 +3,7 @@
 @use "./layout/header";
 @use "./layout/mainContent";
 @use "./layout/footer";
+
 *,
 *::before,
 *::after {
@@ -11,17 +12,17 @@
 
 :root {
     height: 100%;
-}
 
-body {
-    height: 100%;
-    background-color: variables.$main-color;
-    color: variables.$main-text-color;
+    body {
+        height: 100%;
+        background-color: variables.$main-color;
+        color: variables.$main-text-color;
 
-    font-family: variables.$font-family;
-    font-family: variables.$font-size;
-    display: flex;
-    flex-direction: column;
+        font-family: variables.$font-family;
+        font-family: variables.$font-size;
+        display: flex;
+        flex-direction: column;
 
-    text-align: center;
+        text-align: center;
+    }
 }

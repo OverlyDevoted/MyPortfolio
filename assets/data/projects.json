@@ -26,7 +26,10 @@
         "repo_url": "https://github.com/OverlyDevoted/2023GameAwards",
         "languages": [
             "JavaScript",
-            "CSS"
+            "CSS",
+            "Node",
+            "C++",
+            "SASS"
         ],
         "theme": {
             "header": "null",

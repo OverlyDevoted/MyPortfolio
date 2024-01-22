@@ -1,0 +1,13 @@
+@use "./../variables";
+
+.languages {
+    display: flex;
+    flex-wrap: wrap;
+    width: 15%;
+    justify-content: end;
+    @include variables.color-lang("javascript");
+    @include variables.color-lang("css");
+    @include variables.color-lang("c");
+    @include variables.color-lang("node");
+    @include variables.color-lang("sass");
+}

@@ -7,9 +7,65 @@ header {
   max-width: 750px;
   margin: 0 auto;
 }
-
-.preview-desk {
+.post-container > .preview-desk {
   height: 350px;
+  transition-property: scale;
+  transition-duration: 300ms;
+}
+.post-container > .preview-desk:hover {
+  scale: 1.5;
+}
+.post-container > .additional-info {
+  display: flex;
+  justify-content: space-between;
+}
+.post-container > .additional-info > .links * {
+  display: block;
+  text-align: left;
+  text-decoration: underline;
+  color: white;
+  font-weight: bold;
+}
+.post-container > .additional-info > .links *:hover:first-child {
+  color: orange;
+}
+.post-container > .additional-info > .links *:hover:last-child {
+  color: cornflowerblue;
+}
+.post-container > p {
+  text-align: justify;
+}
+
+.languages {
+  display: flex;
+  flex-wrap: wrap;
+  width: 15%;
+  justify-content: end;
+}
+.languages .javascript-lang {
+  background-color: #F0DB4F;
+  color: #323330;
+  font-weight: bold;
+}
+.languages .css-lang {
+  background-color: #264de4;
+  color: #ebebeb;
+  font-weight: bold;
+}
+.languages .c-lang {
+  background-color: #e9e9e9;
+  color: #3336df;
+  font-weight: bold;
+}
+.languages .node-lang {
+  background-color: #3c873a;
+  color: #303030;
+  font-weight: bold;
+}
+.languages .sass-lang {
+  background-color: #F7F7F7;
+  color: #C3548C;
+  font-weight: bold;
 }
 
 main {
@@ -17,7 +73,6 @@ main {
   width: 100%;
   text-align: center;
   display: flex;
-  align-items: center;
 }
 
 footer {
@@ -34,8 +89,7 @@ footer {
 :root {
   height: 100%;
 }
-
-body {
+:root body {
   height: 100%;
   background-color: black;
   color: white;

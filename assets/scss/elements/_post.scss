@@ -1,7 +1,38 @@
 .post-container {
     max-width: 750px;
     margin: 0 auto;
-}
-.preview-desk {
-    height: 350px;
+
+    &>.preview-desk {
+        height: 350px;
+        transition-property: scale;
+        transition-duration: 300ms;
+
+        &:hover {
+            scale: 1.5;
+        }
+    }
+
+    &>.additional-info {
+        display: flex;
+        justify-content: space-between;
+
+        &>.links * {
+            display: block;
+            text-align: left;
+            text-decoration: underline;
+            color: white;
+            font-weight: bold;
+
+            &:hover:first-child {
+                color: orange;
+            }
+            &:hover:last-child {
+                color: cornflowerblue;
+            }
+        }
+    }
+
+    &>p {
+        text-align: justify;
+    }
 }
