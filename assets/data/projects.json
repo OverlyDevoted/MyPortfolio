@@ -7,7 +7,7 @@
         "url": "https://overlydevoted.github.io/LeagueStats/",
         "repo_url": "https://github.com/OverlyDevoted/LeagueStats",
         "languages": [
-            "JavaScript",
+            "HTML",
             "CSS"
         ],
         "theme": {
@@ -25,11 +25,9 @@
         "url": "https://overlydevoted.github.io/2023GameAwards/",
         "repo_url": "https://github.com/OverlyDevoted/2023GameAwards",
         "languages": [
-            "JavaScript",
+            "HTML",
             "CSS",
-            "Node",
-            "C++",
-            "SASS"
+            "JavaScript"
         ],
         "theme": {
             "header": "null",
@@ -46,8 +44,9 @@
         "url": "https://overlydevoted.github.io/PortaNote/",
         "repo_url": "https://github.com/OverlyDevoted/PortaNote",
         "languages": [
-            "JavaScript",
-            "CSS"
+            "HTML",
+            "CSS",
+            "JavaScript"
         ],
         "theme": {
             "header": "null",

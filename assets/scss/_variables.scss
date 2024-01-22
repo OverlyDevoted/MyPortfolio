@@ -11,6 +11,7 @@ $font-size: 16px;
         background-color: map.get($lang-colors, $name+'-back');
         color: map.get($lang-colors, $name+'-text');
         font-weight: bold;
+        height: fit-content;
     }
 }
 
@@ -20,6 +21,8 @@ $lang-colors: (
     "javascript-text": #323330,
     "css-back": #264de4,
     "css-text": #ebebeb,
+    "html-back": #e34c26,
+    "html-text":#ffffff,
     "node-back":#3c873a,
     "node-text":#303030,
     "c-back": #e9e9e9,
