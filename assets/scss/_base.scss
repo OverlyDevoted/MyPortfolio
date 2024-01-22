@@ -1,7 +1,7 @@
 @use "./variables";
 
 @use "./layout/header";
-@use "./layout/mainContent";
+@use "./layout/main";
 @use "./layout/footer";
 
 *,
@@ -24,5 +24,6 @@
         flex-direction: column;
 
         text-align: center;
+        overflow-x: hidden;
     }
 }

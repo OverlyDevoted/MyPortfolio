@@ -1,0 +1,36 @@
+@use "./../elements/post";
+@use "./../elements/languages";
+
+main {
+    flex: 1;
+    text-align: center;
+    display: flex;
+
+    @for $i from 1 through 3 {
+        @if $i ==1 or $i ==3 {
+            &>div:nth-child(#{$i}) {
+                display: none;
+
+                @media screen and (min-width: 750px) {
+                    display: flex;
+                }
+            }
+        }
+    }
+
+    
+    &>.btn {
+        font-size: 4em;
+        align-items: center;
+        justify-content: center;
+        width: 10%;
+        cursor: pointer;
+        opacity: 0;
+        transition: opacity 1s ease;
+        z-index: 1;
+    }
+    &>.post-btn {
+        opacity: 1;
+    }
+
+}

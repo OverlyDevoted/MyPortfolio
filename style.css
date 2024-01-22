@@ -5,35 +5,50 @@ header {
 
 .post-container {
   max-width: 750px;
+  width: 100%;
   margin: 0 auto;
 }
-.post-container > .preview-desk {
-  height: 350px;
+.post-container > .preview-container {
+  display: flex;
+  justify-content: center;
+}
+.post-container > .preview-container > .preview-desk {
   transition-property: scale;
   transition-duration: 300ms;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
 }
-.post-container > .preview-desk:hover {
-  scale: 1.5;
+@media only screen and (min-width: 750px) {
+  .post-container > .preview-container > .preview-desk:hover {
+    scale: 1.5;
+  }
 }
-.post-container > .additional-info {
+@media only screen and (max-width: 750px) {
+  .post-container > div:last-child {
+    padding: 1em;
+  }
+}
+.post-container > div:last-child .additional-info {
   margin-top: 2em;
   display: flex;
   justify-content: space-between;
 }
-.post-container > .additional-info > .links * {
+.post-container > div:last-child .additional-info > .links * {
   display: block;
   text-align: left;
   text-decoration: underline;
   color: white;
   font-weight: bold;
 }
-.post-container > .additional-info > .links *:hover:first-child {
+.post-container > div:last-child .additional-info > .links *:hover:first-child {
   color: orange;
 }
-.post-container > .additional-info > .links *:hover:last-child {
+.post-container > div:last-child .additional-info > .links *:hover:last-child {
   color: cornflowerblue;
 }
-.post-container > p {
+.post-container > div:last-child p {
   text-align: justify;
 }
 
@@ -88,9 +103,37 @@ header {
 
 main {
   flex: 1;
-  width: 100%;
   text-align: center;
   display: flex;
+}
+main > div:nth-child(1) {
+  display: none;
+}
+@media screen and (min-width: 750px) {
+  main > div:nth-child(1) {
+    display: flex;
+  }
+}
+main > div:nth-child(3) {
+  display: none;
+}
+@media screen and (min-width: 750px) {
+  main > div:nth-child(3) {
+    display: flex;
+  }
+}
+main > .btn {
+  font-size: 4em;
+  align-items: center;
+  justify-content: center;
+  width: 10%;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 1s ease;
+  z-index: 1;
+}
+main > .post-btn {
+  opacity: 1;
 }
 
 footer {
@@ -116,4 +159,5 @@ footer {
   display: flex;
   flex-direction: column;
   text-align: center;
+  overflow-x: hidden;
 }/*# sourceMappingURL=style.css.map */
