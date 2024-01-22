@@ -15,7 +15,7 @@
             "body": "null",
             "footer": "null"
         },
-        "desktop":"./assets/images/projects/LeagueStats/Desktop.png"
+        "desktop":"./assets/images/projects/LeagueStats/desktop.png"
     },
     {
         "id": 1,
@@ -33,7 +33,7 @@
             "body": "null",
             "footer": "null"
         },
-        "desktop":"./assets/images/projects/GameAwards/Desktop.png"
+        "desktop":"./assets/images/projects/GameAwards/desktop.png"
     },
     {
         "id": 2,
