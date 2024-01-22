@@ -3,6 +3,11 @@ header {
   width: 100%;
 }
 
+.post-container {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
 .preview-desk {
   height: 350px;
 }
@@ -38,4 +43,5 @@ body {
   font-family: 16px;
   display: flex;
   flex-direction: column;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */

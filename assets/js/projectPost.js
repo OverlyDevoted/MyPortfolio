@@ -1,23 +1,24 @@
 export default class ProjectHandler {
     constructor(parent, initPost) {
-        this.parent = parent;
+        // setup initial HTML
+        const postContainer = document.createElement("div");
+        parent.replaceChild(postContainer, document.getElementById("loading-container"))
+        postContainer.classList.add("post-container")
+        
+        // create post elements
         this.title = document.createElement("h2");
         this.description = document.createElement("p");
         this.icon = document.createElement("img");
-        
+
         this.desktop = document.createElement("img");
         this.desktop.classList.add("preview-desk")
 
-        this.loadPost(initPost);
+        postContainer.append(this.title, this.description, this.desktop)
 
-        this.div = document.createElement("div");
-        this.innerContainer = document.createElement("div");
-        this.innerContainer.append(this.title, this.description, this.icon, this.desktop);
-        this.div.append(this.innerContainer);
-        this.parent.innerHTML = this.div.innerHTML;
+        //loading data
+        this.loadPost(initPost);
     }
     loadPost(post) {
-        console.log(post)
         this.title.textContent = post.title;
         this.description.textContent = post.description;
         this.icon.src = post.icon;
