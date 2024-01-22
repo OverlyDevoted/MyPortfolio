@@ -1,10 +1,47 @@
 [
     {
-        "name": "League Stats 2023",
+        "id": 3,
+        "title": "League Stats 2023",
         "description": "Created this static website as a practice for table elements. Page displays champion stats of LEAGUE OF LEGENDS World 23 championship.",
-        "icon": "url",
+        "icon": "/assets/images/icons/league.png",
         "url": "https://overlydevoted.github.io/LeagueStats/",
         "repo_url": "https://github.com/OverlyDevoted/LeagueStats",
+        "languages": [
+            "JavaScript",
+            "CSS"
+        ],
+        "theme": {
+            "header": "null",
+            "body": "null",
+            "footer": "null"
+        },
+        "desktop":"./assets/images/LeagueStats/Desktop.png"
+    },
+    {
+        "id": 1,
+        "title": "2023 Game Awards",
+        "description": "This is a creative HTML, CSS practice project for practicing flex, with an added theme of expressing my love for gaming. In this page I list out my gaming achievements and my favorite games of the year.",
+        "icon": "/assets/images/icons/medal.svg",
+        "url": "https://overlydevoted.github.io/2023GameAwards/",
+        "repo_url": "https://github.com/OverlyDevoted/2023GameAwards",
+        "languages": [
+            "JavaScript",
+            "CSS"
+        ],
+        "theme": {
+            "header": "null",
+            "body": "null",
+            "footer": "null"
+        },
+        "desktop":"./assets/images/GameAwards/Desktop.png"
+    },
+    {
+        "id": 2,
+        "title": "PortaNote",
+        "description": "Concept art page for an note taking web application. I take a lot of notes. Like a lot... And this could be a life saver, that would connect all of my notes into one place so I could take my notes anywhere, anytime.",
+        "icon": "/assets/images/icons/clipboard.svg",
+        "url": "https://overlydevoted.github.io/PortaNote/",
+        "repo_url": "https://github.com/OverlyDevoted/PortaNote",
         "languages": [
             "JavaScript",
             "CSS"

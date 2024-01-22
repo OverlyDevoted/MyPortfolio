@@ -1,4 +1,8 @@
 @use "./variables";
+
+@use "./layout/header";
+@use "./layout/mainContent";
+@use "./layout/footer";
 *,
 *::before,
 *::after {
@@ -16,4 +20,6 @@ body {
 
     font-family: variables.$font-family;
     font-family: variables.$font-size;
+    display: flex;
+    flex-direction: column;
 }

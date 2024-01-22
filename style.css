@@ -1,3 +1,25 @@
+header {
+  flex: 0;
+  width: 100%;
+}
+
+.preview-desk {
+  height: 350px;
+}
+
+main {
+  flex: 1;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+footer {
+  flex: 0;
+  width: 100%;
+}
+
 *,
 *::before,
 *::after {
@@ -14,4 +36,6 @@ body {
   color: white;
   font-family: "Source Code Pro", monospace;
   font-family: 16px;
+  display: flex;
+  flex-direction: column;
 }/*# sourceMappingURL=style.css.map */
