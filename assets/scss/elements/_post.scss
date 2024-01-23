@@ -1,30 +1,53 @@
+:root {
+    --first-fade-in-timer: 1500ms;
+    --default-fade-in-timer: 750ms;
+    --fade-in-timer: var(--first-fade-in-timer);
+}
+
+$fade-in-timer: var(--fade-in-timer);
+$offset: 400px;
+
+@mixin defaultPos($tag) {
+    #{$tag} {
+        transition-property: transform;
+        transition-duration: $fade-in-timer;
+        transform: translateY(0px);
+    }
+}
+
+@include defaultPos("h2");
+@include defaultPos("p");
+@include defaultPos(".links");
+@include defaultPos(".languages");
+
+.preview-container {
+    display: flex;
+    justify-content: center;
+
+    &>.preview-desk {
+        transition-property: scale;
+        transition-duration: 300ms;
+        
+        width: 100%;
+
+        @media only screen and (min-width: 750px) {
+            
+
+            &:hover {
+                scale: 1.5;
+                z-index: 1;
+            }
+        }
+    }
+}
+
 .post-container {
     max-width: 750px;
     width: 100%;
     margin: 0 auto;
 
-    // @media only screen and (max-width: 750px) {
-    //     padding: 1em;
-    // }
-
-    &>.preview-container {
-        display: flex;
-        justify-content: center;
-
-        &>.preview-desk {
-            transition-property: scale;
-            transition-duration: 300ms;
-            height: 400px;
-            object-fit: cover;
-            width: 100%;
-
-            @media only screen and (min-width: 750px) {
-                &:hover {
-                    scale: 1.5;
-                }
-            }
-        }
-    }
+    transition-property: opacity, transform;
+    transition-duration: $fade-in-timer;
 
     &>div:last-child {
 
@@ -58,4 +81,51 @@
             text-align: justify;
         }
     }
+}
+
+.first {
+    opacity: 0;
+
+    h2 {
+        transform: translateY(-100px);
+    }
+
+    p {
+        transform: translateY(100px);
+    }
+
+    .links {
+        transform: translateX(-50px);
+    }
+
+    .languages {
+        transform: translateX(50px);
+    }
+
+    // &>.preview-container {
+    // }
+}
+
+.default-pos {
+    transform: translate(0);
+}
+
+.right-fade-out {
+    transform: translateX($offset * -1);
+    opacity: 0;
+}
+
+.left-fade-out {
+    transform: translateX($offset);
+    opacity: 0;
+}
+
+.right-fade-in {
+    transform: translateX($offset);
+    opacity: 0;
+}
+
+.left-fade-in {
+    transform: translateX($offset * -1);
+    opacity: 0;
 }

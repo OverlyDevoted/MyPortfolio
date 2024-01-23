@@ -1,0 +1,22 @@
+
+#mouse-shadow {
+    --shadow-opacity: 0;
+    opacity: var(--shadow-opacity);
+    transition-property: opacity;
+    transition-duration: 750ms;
+    position: absolute;
+    top: 0;
+
+    width: 1px;
+    height: 100px;
+    background-color: transparent;
+    box-shadow: 0 0 150px 20px white;
+
+    
+}
+@media screen and (max-width:750px) {
+
+    #mouse-shadow {
+        opacity: 0;
+    }
+}

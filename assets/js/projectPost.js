@@ -1,9 +1,14 @@
 export default class ProjectHandler {
     constructor(parent, projects) {
         // setup initial HTML
-        const postContainer = document.createElement("div");
-        parent.replaceChild(postContainer, document.getElementById("loading-container"))
-        postContainer.classList.add("post-container")
+        this.postContainer = document.createElement("div");
+        parent.replaceChild(this.postContainer, document.getElementById("loading-container"))
+        this.postContainer.classList.add("post-container")
+        this.postContainer.classList.add("first")
+        this.postContainer.id = "post"
+        setTimeout(() => {
+            this.postContainer.classList.remove("first")
+        }, 1);
 
         // create post elements
         this.title = document.createElement("h2");
@@ -34,15 +39,50 @@ export default class ProjectHandler {
         additionalInf.append(links, this.languages);
         info.append(additionalInf, this.description)
 
-        postContainer.append(this.title, previewDiv, info);
-
+        this.postContainer.append(this.title, previewDiv, info);
 
         //other variables
         this.projects = projects
         this.curPost = -1;
+        this.callbacks = {
+            onStart: {
+                fn: undefined,
+                args: undefined
+            },
+            onEnd: {
+                fn: undefined,
+                args: undefined
+            }
+        }
 
         //loading data
         this.loadPost();
+        this.side = undefined;
+        this.loading = false;
+        this.root = document.querySelector(":root");
+        document.getElementById("post").addEventListener("transitionend", async (e) => {
+            if (e.target.classList.contains("default-pos")) {
+                this.loading = false;
+                e.target.classList.remove("default-pos")
+            }
+            if (!e.target.classList.contains(`${this.side}-fade-out`))
+                return;
+            console.log(e.target)
+            this.root.style.setProperty("--fade-in-timer", "0ms")
+            e.target.classList.add(`${this.side}-fade-in`)
+            const promise = () => new Promise((res) => {
+                setTimeout(() => {
+                    res();
+                }, 0);
+            })
+            await promise()
+            this.loadPost()
+
+            this.root.style.setProperty("--fade-in-timer", getComputedStyle(this.root).getPropertyValue("--default-fade-in-timer"))
+            e.target.classList.remove(`${this.side}-fade-in`)
+            e.target.classList.remove(`${this.side}-fade-out`)
+            e.target.classList.add("default-pos")
+        })
     }
     createLink(name) {
         const aTag = document.createElement("a");
@@ -57,9 +97,17 @@ export default class ProjectHandler {
         element.textContent = language;
         return element;
     }
-    loadPost(decrement = false) {
-        
-        const dec = decrement ? -1 : 1;
+    startLoad(side) {
+        if (!this.loading) {
+            this.side = side;
+            this.postContainer.classList.add(`${this.side}-fade-out`)
+
+            this.loading = true;
+        }
+    }
+    loadPost() {
+        const dec = this.side == "left" ? -1 : 1;
+
         this.curPost = (this.projects.length + (this.curPost + dec)) % this.projects.length;
 
         this.title.textContent = this.projects[this.curPost].title;
@@ -75,9 +123,14 @@ export default class ProjectHandler {
             this.languages.appendChild(this.createTagLanguage(language.toLowerCase()));
         })
     }
-    //so that we could change fill color
-    async loadInlineIcon(link) {
-
+    addLoadCallback(name, fn, ...args) {
+        if (this.callbacks[name]) {
+            this.callbacks[name].fn = fn
+            this.callbacks[name].args = args
+        }
     }
+
+    //so that we could change fill color
+
 }
 

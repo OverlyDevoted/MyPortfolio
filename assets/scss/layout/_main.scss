@@ -1,25 +1,28 @@
 @use "./../elements/post";
 @use "./../elements/languages";
+@use "./../elements/loading";
 
 main {
     flex: 1;
     text-align: center;
     display: flex;
-
-    @for $i from 1 through 3 {
-        @if $i ==1 or $i ==3 {
-            &>div:nth-child(#{$i}) {
-                display: none;
-
-                @media screen and (min-width: 750px) {
-                    display: flex;
-                }
-            }
-        }
+    @media screen and (max-width:750px) {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        grid-template-rows: auto 1fr;
+        justify-items: center;
     }
 
+    &>#post {
+        grid-row-start: 1;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
     
     &>.btn {
+        user-select: none;
+        grid-row-start: 2;
+        display: flex;
         font-size: 4em;
         align-items: center;
         justify-content: center;
@@ -27,7 +30,7 @@ main {
         cursor: pointer;
         opacity: 0;
         transition: opacity 1s ease;
-        z-index: 1;
+        z-index: 2;
     }
     &>.post-btn {
         opacity: 1;
