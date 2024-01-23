@@ -1,21 +1,4 @@
 @use "sass:map";
-
-$main-color: black;
-$main-text-color: white;
-$font-family: 'Source Code Pro', monospace;
-$font-size: 16px;
-
-
-@mixin color-lang($name) {
-    .#{$name}-lang {
-        background-color: map.get($lang-colors, $name+'-back');
-        color: map.get($lang-colors, $name+'-text');
-        font-weight: bold;
-        height: fit-content;
-    }
-}
-
-//languages colors
 $lang-colors: (
     "javascript-back": #F0DB4F,
     "javascript-text": #323330,
@@ -29,4 +12,38 @@ $lang-colors: (
     "c-text":#3336df,
     "sass-back":#F7F7F7,
     "sass-text":#C3548C,
+    "opengl-back":#f18407,
+    "opengl-text":#F7F7F7,
+    "glsl-back":#fff,
+    "glsl-text":#d31010de
 );
+$main-color: black;
+$main-text-color: white;
+$font-family: 'Source Code Pro', monospace;
+$font-size: 16px;
+
+@mixin color-lang($name) {
+    .#{$name}-lang {
+        background-color: map.get($lang-colors, $name+'-back');
+        color: map.get($lang-colors, $name+'-text');
+        font-weight: bold;
+        height: fit-content;
+    }
+}
+
+.languages {
+    display: flex;
+    flex-wrap: wrap;
+    width: 15%;
+    justify-content: end;
+    @include color-lang("javascript");
+    @include color-lang("css");
+    @include color-lang("c");
+    @include color-lang("node");
+    @include color-lang("sass");
+    @include color-lang("html");
+    @include color-lang("opengl");
+    @include color-lang("glsl");
+}
+
+//languages colors

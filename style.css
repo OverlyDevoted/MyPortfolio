@@ -1,3 +1,66 @@
+.languages {
+  display: flex;
+  flex-wrap: wrap;
+  width: 15%;
+  justify-content: end;
+}
+.languages .javascript-lang {
+  background-color: #F0DB4F;
+  color: #323330;
+  font-weight: bold;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.languages .css-lang {
+  background-color: #264de4;
+  color: #ebebeb;
+  font-weight: bold;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.languages .c-lang {
+  background-color: #e9e9e9;
+  color: #3336df;
+  font-weight: bold;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.languages .node-lang {
+  background-color: #3c873a;
+  color: #303030;
+  font-weight: bold;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.languages .sass-lang {
+  background-color: #F7F7F7;
+  color: #C3548C;
+  font-weight: bold;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.languages .html-lang {
+  background-color: #e34c26;
+  color: #ffffff;
+  font-weight: bold;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.languages .opengl-lang {
+  background-color: #f18407;
+  color: #F7F7F7;
+  font-weight: bold;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.languages .glsl-lang {
+  background-color: #fff;
+  color: rgba(211, 16, 16, 0.8705882353);
+  font-weight: bold;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
 header {
   flex: 0;
   width: 100%;
@@ -121,55 +184,6 @@ p {
 .left-fade-in {
   transform: translateX(-400px);
   opacity: 0;
-}
-
-.languages {
-  display: flex;
-  flex-wrap: wrap;
-  width: 15%;
-  justify-content: end;
-}
-.languages .javascript-lang {
-  background-color: #F0DB4F;
-  color: #323330;
-  font-weight: bold;
-  height: -moz-fit-content;
-  height: fit-content;
-}
-.languages .css-lang {
-  background-color: #264de4;
-  color: #ebebeb;
-  font-weight: bold;
-  height: -moz-fit-content;
-  height: fit-content;
-}
-.languages .c-lang {
-  background-color: #e9e9e9;
-  color: #3336df;
-  font-weight: bold;
-  height: -moz-fit-content;
-  height: fit-content;
-}
-.languages .node-lang {
-  background-color: #3c873a;
-  color: #303030;
-  font-weight: bold;
-  height: -moz-fit-content;
-  height: fit-content;
-}
-.languages .sass-lang {
-  background-color: #F7F7F7;
-  color: #C3548C;
-  font-weight: bold;
-  height: -moz-fit-content;
-  height: fit-content;
-}
-.languages .html-lang {
-  background-color: #e34c26;
-  color: #ffffff;
-  font-weight: bold;
-  height: -moz-fit-content;
-  height: fit-content;
 }
 
 #loading-container {

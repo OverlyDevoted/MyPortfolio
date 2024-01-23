@@ -43,7 +43,7 @@ export default class ProjectHandler {
 
         //other variables
         this.projects = projects
-        this.curPost = -1;
+        this.curPost = 1;
         this.callbacks = {
             onStart: {
                 fn: undefined,
@@ -60,15 +60,16 @@ export default class ProjectHandler {
         this.side = undefined;
         this.loading = false;
         this.root = document.querySelector(":root");
+        this.counter = 0;
         document.getElementById("post").addEventListener("transitionend", async (e) => {
             if (e.target.classList.contains("default-pos")) {
                 this.loading = false;
                 e.target.classList.remove("default-pos")
+                return;
             }
             if (!e.target.classList.contains(`${this.side}-fade-out`))
                 return;
-            console.log(e.target)
-            this.root.style.setProperty("--fade-in-timer", "0ms")
+            this.root.style.setProperty("--fade-in-timer", "unset")
             e.target.classList.add(`${this.side}-fade-in`)
             const promise = () => new Promise((res) => {
                 setTimeout(() => {
@@ -76,7 +77,8 @@ export default class ProjectHandler {
                 }, 0);
             })
             await promise()
-            this.loadPost()
+            if (!e.target.classList.contains("default-pos"))
+                this.loadPost()
 
             this.root.style.setProperty("--fade-in-timer", getComputedStyle(this.root).getPropertyValue("--default-fade-in-timer"))
             e.target.classList.remove(`${this.side}-fade-in`)
@@ -106,17 +108,20 @@ export default class ProjectHandler {
         }
     }
     loadPost() {
-        const dec = this.side == "left" ? -1 : 1;
-
+        const dec = this.side == "left" ? 1 : -1;
         this.curPost = (this.projects.length + (this.curPost + dec)) % this.projects.length;
 
         this.title.textContent = this.projects[this.curPost].title;
         this.description.textContent = this.projects[this.curPost].description;
-        this.icon.src = this.projects[this.curPost].icon;
         this.desktop.src = this.projects[this.curPost].desktop;
 
         this.repo.href = this.projects[this.curPost].repo_url;
-        this.project.href = this.projects[this.curPost].url;
+        if (this.projects[this.curPost].url) {
+            this.project.href = this.projects[this.curPost].url;
+            this.project.textContent = "Live Project"
+        }
+        else
+            this.project.textContent = ""
 
         this.languages.innerHTML = ""
         this.projects[this.curPost].languages.forEach((language) => {

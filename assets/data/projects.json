@@ -2,8 +2,7 @@
     {
         "id": 3,
         "title": "League Stats 2023",
-        "description": "Created this static website as a practice for table elements. Page displays champion stats of LEAGUE OF LEGENDS World 23 championship.",
-        "icon": "/assets/images/icons/league.png",
+        "description": "Created this static website as a practice for table elements. Page displays champion stats for LEAGUE OF LEGENDS World 23 championship.",
         "url": "https://overlydevoted.github.io/LeagueStats/",
         "repo_url": "https://github.com/OverlyDevoted/LeagueStats",
         "languages": [
@@ -15,13 +14,12 @@
             "body": "null",
             "footer": "null"
         },
-        "desktop":"./assets/images/projects/LeagueStats/optimized.webp"
+        "desktop": "./assets/images/projects/LeagueStats/optimized.webp"
     },
     {
         "id": 1,
         "title": "2023 Game Awards",
-        "description": "This is a creative HTML, CSS practice project for practicing flex, with an added theme of expressing my love for gaming. In this page I list out my gaming achievements and my favorite games of the year.",
-        "icon": "/assets/images/icons/medal.svg",
+        "description": "This is a creative HTML, CSS project for practicing flex boxes with an added theme of gaming. This is a light-hearted one page site where I list out my gaming achievements and some of my favorite games of the 2023.",
         "url": "https://overlydevoted.github.io/2023GameAwards/",
         "repo_url": "https://github.com/OverlyDevoted/2023GameAwards",
         "languages": [
@@ -34,13 +32,12 @@
             "body": "null",
             "footer": "null"
         },
-        "desktop":"./assets/images/projects/GameAwards/optimized.webp"
+        "desktop": "./assets/images/projects/GameAwards/optimized.webp"
     },
     {
         "id": 2,
         "title": "PortaNote",
-        "description": "Concept art page for an note taking web application. I take a lot of notes. Like a lot... And this could be a life saver, that would connect all of my notes into one place so I could take my notes anywhere, anytime.",
-        "icon": "/assets/images/icons/clipboard.svg",
+        "description": "Concept art page for an note taking web application. I take a lot of notes. Like a lot... It would be a huge life saver, if I had one place where I could go to write and store my notes.",
         "url": "https://overlydevoted.github.io/PortaNote/",
         "repo_url": "https://github.com/OverlyDevoted/PortaNote",
         "languages": [
@@ -53,6 +50,41 @@
             "body": "null",
             "footer": "null"
         },
-        "desktop":"./assets/images/projects/PortaNote/optimized.webp"
+        "desktop": "./assets/images/projects/PortaNote/optimized.webp"
+    },
+    {
+        "id": 4,
+        "title": "Usecur",
+        "description": "This page was created as a practice for making a whole front-page using all the things I have learned about HTML and CSS. Page contains some simple animations, transitions and is responsive for different screen sizes. The theme for this one is cyber-security.",
+        "url": "https://overlydevoted.github.io/Usecur/",
+        "repo_url": "https://github.com/OverlyDevoted/Usecur",
+        "languages": [
+            "HTML",
+            "CSS"
+        ],
+        "theme": {
+            "header": "null",
+            "body": "null",
+            "footer": "null"
+        },
+        "desktop": "./assets/images/projects/Usecur/desktop.webp"
+    },
+    {
+        "id": 5,
+        "title": "Parallel Falling Sand Render Engine",
+        "description": "This was my bachelor's thesis project. I implemented a rendering engine using OpenGL and implemented GPU parallelized falling sand celullar automata simulation which utilized compute shaders. Additionally, compared various performance metrics of sequential algorithm and parallel algorithm.",
+        "url": "https://www.youtube.com/watch?v=VipiV5QAbz8",
+        "repo_url": "https://github.com/OverlyDevoted/FallingSandLearn",
+        "languages": [
+            "OpenGL",
+            "GLSL",
+            "C++"
+        ],
+        "theme": {
+            "header": "null",
+            "body": "null",
+            "footer": "null"
+        },
+        "desktop": "./assets/images/projects/Bachelor/optimized.webp"
     }
 ]
