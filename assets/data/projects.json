@@ -15,7 +15,7 @@
             "body": "null",
             "footer": "null"
         },
-        "desktop":"./assets/images/projects/LeagueStats/desktop.png"
+        "desktop":"./assets/images/projects/LeagueStats/optimized.webp"
     },
     {
         "id": 1,
@@ -34,7 +34,7 @@
             "body": "null",
             "footer": "null"
         },
-        "desktop":"./assets/images/projects/GameAwards/desktop.png"
+        "desktop":"./assets/images/projects/GameAwards/optimized.webp"
     },
     {
         "id": 2,
@@ -53,6 +53,6 @@
             "body": "null",
             "footer": "null"
         },
-        "desktop":"./assets/images/projects/PortaNote/desktop.png"
+        "desktop":"./assets/images/projects/PortaNote/optimized.webp"
     }
 ]

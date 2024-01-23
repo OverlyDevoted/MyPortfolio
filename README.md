@@ -6,9 +6,9 @@ This is a repository for my vanilla JavaScript portfolio page.
 
 - [x] Post styling
 - [x] On hover increase website photo size 
-      - [ ] disable on mobile and make photo 100% width
+      - [x] disable on mobile and make photo 100% width
 - [x] Buttons for cycling between posts
-      - [ ] Mobile
+      - [x] Mobile
 - [ ] Metadata
 - [x] Upon load up, have a short timeout to transition from black to the theme color
 - [x] Post cycle animation:
