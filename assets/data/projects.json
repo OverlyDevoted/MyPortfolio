@@ -3,8 +3,16 @@
         "id": 3,
         "title": "League Stats 2023",
         "description": "Created this static website as a practice for table elements. Page displays champion stats for LEAGUE OF LEGENDS World 23 championship.",
-        "url": "https://overlydevoted.github.io/LeagueStats/",
-        "repo_url": "https://github.com/OverlyDevoted/LeagueStats",
+        "links": [
+            {
+                "text": "Live project",
+                "url": "https://overlydevoted.github.io/LeagueStats/"
+            },
+            {
+                "text": "Repository",
+                "url": "https://github.com/OverlyDevoted/LeagueStats"
+            }
+        ],
         "languages": [
             "HTML",
             "CSS"
@@ -20,8 +28,16 @@
         "id": 1,
         "title": "2023 Game Awards",
         "description": "This is a creative HTML, CSS project for practicing flex boxes with an added theme of gaming. This is a light-hearted one page site where I list out my gaming achievements and some of my favorite games of the 2023.",
-        "url": "https://overlydevoted.github.io/2023GameAwards/",
-        "repo_url": "https://github.com/OverlyDevoted/2023GameAwards",
+        "links": [
+            {
+                "text": "Live project",
+                "url": "https://overlydevoted.github.io/2023GameAwards/"
+            },
+            {
+                "text": "Repository",
+                "url": "https://github.com/OverlyDevoted/2023GameAwards"
+            }
+        ],
         "languages": [
             "HTML",
             "CSS",
@@ -38,8 +54,16 @@
         "id": 2,
         "title": "PortaNote",
         "description": "Concept art page for an note taking web application. I take a lot of notes. Like a lot... It would be a huge life saver, if I had one place where I could go to write and store my notes.",
-        "url": "https://overlydevoted.github.io/PortaNote/",
-        "repo_url": "https://github.com/OverlyDevoted/PortaNote",
+        "links": [
+            {
+                "text": "Live project",
+                "url": "https://overlydevoted.github.io/PortaNote/"
+            },
+            {
+                "text": "Repository",
+                "url": "https://github.com/OverlyDevoted/PortaNote"
+            }
+        ],
         "languages": [
             "HTML",
             "CSS",
@@ -56,8 +80,16 @@
         "id": 4,
         "title": "Usecur",
         "description": "This page was created as a practice for making a whole front-page using all the things I have learned about HTML and CSS. Page contains some simple animations, transitions and is responsive for different screen sizes. The theme for this one is cyber-security.",
-        "url": "https://overlydevoted.github.io/Usecur/",
-        "repo_url": "https://github.com/OverlyDevoted/Usecur",
+        "links": [
+            {
+                "text": "Live project",
+                "url": "https://overlydevoted.github.io/Usecur/"
+            },
+            {
+                "text": "Repository",
+                "url": "https://github.com/OverlyDevoted/Usecur"
+            }
+        ],
         "languages": [
             "HTML",
             "CSS"
@@ -73,8 +105,16 @@
         "id": 5,
         "title": "Parallel Falling Sand Render Engine",
         "description": "This was my bachelor's thesis project. I implemented a rendering engine using OpenGL and implemented GPU parallelized falling sand celullar automata simulation which utilized compute shaders. Additionally, compared various performance metrics of sequential algorithm and parallel algorithm.",
-        "url": "https://www.youtube.com/watch?v=VipiV5QAbz8",
-        "repo_url": "https://github.com/OverlyDevoted/FallingSandLearn",
+        "links": [
+            {
+                "text": "Video showcase",
+                "url": "https://www.youtube.com/watch?v=VipiV5QAbz8"
+            },
+            {
+                "text": "Repository",
+                "url": "https://github.com/OverlyDevoted/FallingSandLearn"
+            }
+        ],
         "languages": [
             "OpenGL",
             "GLSL",
@@ -86,5 +126,35 @@
             "footer": "null"
         },
         "desktop": "./assets/images/projects/Bachelor/optimized.webp"
+    },
+    {
+        "id": 6,
+        "title": "Develop.games Responsiveness Update",
+        "description": "This was a project by which I wanted to give back to Twitch streamer, developer, hacker Thor, PirateSoftware. His streams kept me company for some time now and on his streams he oftens mentions develop.games website. The website lacks responsiveness and some accessibility features which I tried to address and implemet during this project.",
+        "links": [
+            {
+                "text": "Original website",
+                "url": "https://develop.games/"
+            },
+            {
+                "text": "Check out Thor on Twitch",
+                "url": "https://www.twitch.tv/piratesoftware"
+            },
+            {
+                "text": "Repository",
+                "url": "https://github.com/OverlyDevoted/Responsive_Develop.games"
+            }
+        ],
+        "languages": [
+            "HTML",
+            "CSS",
+            "JavaScript"
+        ],
+        "theme": {
+            "header": "null",
+            "body": "null",
+            "footer": "null"
+        },
+        "desktop": "./assets/images/projects/DevelopGames/desktop.webp"
     }
 ]

@@ -31,19 +31,5 @@ $font-size: 16px;
     }
 }
 
-.languages {
-    display: flex;
-    flex-wrap: wrap;
-    width: 15%;
-    justify-content: end;
-    @include color-lang("javascript");
-    @include color-lang("css");
-    @include color-lang("c");
-    @include color-lang("node");
-    @include color-lang("sass");
-    @include color-lang("html");
-    @include color-lang("opengl");
-    @include color-lang("glsl");
-}
 
 //languages colors

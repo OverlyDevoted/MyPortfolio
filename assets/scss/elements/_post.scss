@@ -1,3 +1,5 @@
+@use "./../variables";
+
 :root {
     --first-fade-in-timer: 1500ms;
     --default-fade-in-timer: 750ms;
@@ -27,12 +29,10 @@ $offset: 400px;
     &>.preview-desk {
         transition-property: scale;
         transition-duration: 300ms;
-        
+
         width: 100%;
 
         @media only screen and (min-width: 750px) {
-            
-
             &:hover {
                 scale: 1.5;
                 z-index: 1;
@@ -49,7 +49,7 @@ $offset: 400px;
     transition-property: opacity, transform;
     transition-duration: $fade-in-timer;
 
-    &>div:last-child {
+    &>section:last-child {
 
         @media only screen and (max-width: 750px) {
             padding: 1em;
@@ -60,6 +60,22 @@ $offset: 400px;
             display: flex;
             justify-content: space-between;
 
+            &>.languages {
+                display: flex;
+                flex-wrap: wrap;
+                width: 15%;
+                justify-content: end;
+                align-content: center;
+                @include variables.color-lang("javascript");
+                @include variables.color-lang("css");
+                @include variables.color-lang("c");
+                @include variables.color-lang("node");
+                @include variables.color-lang("sass");
+                @include variables.color-lang("html");
+                @include variables.color-lang("opengl");
+                @include variables.color-lang("glsl");
+            }
+
             &>.links * {
                 display: block;
                 text-align: left;
@@ -67,11 +83,15 @@ $offset: 400px;
                 color: white;
                 font-weight: bold;
 
-                &:hover:first-child {
+                &:hover:nth-child(3n+1) {
                     color: orange;
                 }
 
-                &:hover:last-child {
+                &:hover:nth-child(3n+2) {
+                    color: darkorchid;
+                }
+
+                &:hover:nth-child(3n+3) {
                     color: cornflowerblue;
                 }
             }

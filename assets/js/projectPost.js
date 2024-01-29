@@ -1,7 +1,7 @@
 export default class ProjectHandler {
     constructor(parent, projects) {
         // setup initial HTML
-        this.postContainer = document.createElement("div");
+        this.postContainer = document.createElement("article");
         parent.replaceChild(this.postContainer, document.getElementById("loading-container"))
         this.postContainer.classList.add("post-container")
         this.postContainer.classList.add("first")
@@ -15,28 +15,23 @@ export default class ProjectHandler {
         this.description = document.createElement("p");
         this.icon = document.createElement("img");
 
-        const previewDiv = document.createElement("div")
+        const previewDiv = document.createElement("section")
         previewDiv.classList.add("preview-container")
         this.desktop = document.createElement("img");
         this.desktop.classList.add("preview-desk");
         previewDiv.append(this.desktop)
 
-        const info = document.createElement("div")
+        const info = document.createElement("section")
         const additionalInf = document.createElement("div");
         additionalInf.classList.add("additional-info");
 
         this.languages = document.createElement("div");
         this.languages.classList.add("languages");
 
-        const links = document.createElement("div");
-        links.classList.add("links");
+        this.links = document.createElement("div");
+        this.links.classList.add("links");
 
-        this.repo = this.createLink("Repository")
-        this.project = this.createLink("Live Project")
-
-        links.append(this.repo, this.project)
-
-        additionalInf.append(links, this.languages);
+        additionalInf.append(this.links, this.languages);
         info.append(additionalInf, this.description)
 
         this.postContainer.append(this.title, previewDiv, info);
@@ -44,16 +39,6 @@ export default class ProjectHandler {
         //other variables
         this.projects = projects
         this.curPost = 1;
-        this.callbacks = {
-            onStart: {
-                fn: undefined,
-                args: undefined
-            },
-            onEnd: {
-                fn: undefined,
-                args: undefined
-            }
-        }
 
         //loading data
         this.loadPost();
@@ -86,9 +71,10 @@ export default class ProjectHandler {
             e.target.classList.add("default-pos")
         })
     }
-    createLink(name) {
+    createLink(link) {
         const aTag = document.createElement("a");
-        aTag.textContent = name;
+        aTag.textContent = link.text;
+        aTag.setAttribute("href", link.url);
         aTag.setAttribute("target", "_blank");
         aTag.setAttribute("referrerpolicy", "no-referrer");
         return aTag;
@@ -115,24 +101,26 @@ export default class ProjectHandler {
         this.description.textContent = this.projects[this.curPost].description;
         this.desktop.src = this.projects[this.curPost].desktop;
 
-        this.repo.href = this.projects[this.curPost].repo_url;
-        if (this.projects[this.curPost].url) {
-            this.project.href = this.projects[this.curPost].url;
-            this.project.textContent = "Live Project"
-        }
-        else
-            this.project.textContent = ""
+        // this.repo = this.createLink("Repository")
+        // this.project = this.createLink("Live Project")
+        // this.repo.href = this.projects[this.curPost].repo_url;
+        // if (this.projects[this.curPost].url) {
+        //     this.project.href = this.projects[this.curPost].url;
+        //     this.project.textContent = "Live Project"
+        // }
+        // else
+        //     this.project.textContent = ""
+
+        this.links.innerHTML = "";
+        this.projects[this.curPost].links.map((link) => {
+            const linkElement = this.createLink(link);
+            this.links.append(linkElement);
+        })
 
         this.languages.innerHTML = ""
         this.projects[this.curPost].languages.forEach((language) => {
             this.languages.appendChild(this.createTagLanguage(language.toLowerCase()));
         })
-    }
-    addLoadCallback(name, fn, ...args) {
-        if (this.callbacks[name]) {
-            this.callbacks[name].fn = fn
-            this.callbacks[name].args = args
-        }
     }
 
     //so that we could change fill color

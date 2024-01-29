@@ -1,66 +1,3 @@
-.languages {
-  display: flex;
-  flex-wrap: wrap;
-  width: 15%;
-  justify-content: end;
-}
-.languages .javascript-lang {
-  background-color: #F0DB4F;
-  color: #323330;
-  font-weight: bold;
-  height: -moz-fit-content;
-  height: fit-content;
-}
-.languages .css-lang {
-  background-color: #264de4;
-  color: #ebebeb;
-  font-weight: bold;
-  height: -moz-fit-content;
-  height: fit-content;
-}
-.languages .c-lang {
-  background-color: #e9e9e9;
-  color: #3336df;
-  font-weight: bold;
-  height: -moz-fit-content;
-  height: fit-content;
-}
-.languages .node-lang {
-  background-color: #3c873a;
-  color: #303030;
-  font-weight: bold;
-  height: -moz-fit-content;
-  height: fit-content;
-}
-.languages .sass-lang {
-  background-color: #F7F7F7;
-  color: #C3548C;
-  font-weight: bold;
-  height: -moz-fit-content;
-  height: fit-content;
-}
-.languages .html-lang {
-  background-color: #e34c26;
-  color: #ffffff;
-  font-weight: bold;
-  height: -moz-fit-content;
-  height: fit-content;
-}
-.languages .opengl-lang {
-  background-color: #f18407;
-  color: #F7F7F7;
-  font-weight: bold;
-  height: -moz-fit-content;
-  height: fit-content;
-}
-.languages .glsl-lang {
-  background-color: #fff;
-  color: rgba(211, 16, 16, 0.8705882353);
-  font-weight: bold;
-  height: -moz-fit-content;
-  height: fit-content;
-}
-
 header {
   flex: 0;
   width: 100%;
@@ -120,29 +57,95 @@ p {
   transition-duration: var(--fade-in-timer);
 }
 @media only screen and (max-width: 750px) {
-  .post-container > div:last-child {
+  .post-container > section:last-child {
     padding: 1em;
   }
 }
-.post-container > div:last-child .additional-info {
+.post-container > section:last-child .additional-info {
   margin-top: 2em;
   display: flex;
   justify-content: space-between;
 }
-.post-container > div:last-child .additional-info > .links * {
+.post-container > section:last-child .additional-info > .languages {
+  display: flex;
+  flex-wrap: wrap;
+  width: 15%;
+  justify-content: end;
+  align-content: center;
+}
+.post-container > section:last-child .additional-info > .languages .javascript-lang {
+  background-color: #F0DB4F;
+  color: #323330;
+  font-weight: bold;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.post-container > section:last-child .additional-info > .languages .css-lang {
+  background-color: #264de4;
+  color: #ebebeb;
+  font-weight: bold;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.post-container > section:last-child .additional-info > .languages .c-lang {
+  background-color: #e9e9e9;
+  color: #3336df;
+  font-weight: bold;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.post-container > section:last-child .additional-info > .languages .node-lang {
+  background-color: #3c873a;
+  color: #303030;
+  font-weight: bold;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.post-container > section:last-child .additional-info > .languages .sass-lang {
+  background-color: #F7F7F7;
+  color: #C3548C;
+  font-weight: bold;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.post-container > section:last-child .additional-info > .languages .html-lang {
+  background-color: #e34c26;
+  color: #ffffff;
+  font-weight: bold;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.post-container > section:last-child .additional-info > .languages .opengl-lang {
+  background-color: #f18407;
+  color: #F7F7F7;
+  font-weight: bold;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.post-container > section:last-child .additional-info > .languages .glsl-lang {
+  background-color: #fff;
+  color: rgba(211, 16, 16, 0.8705882353);
+  font-weight: bold;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.post-container > section:last-child .additional-info > .links * {
   display: block;
   text-align: left;
   text-decoration: underline;
   color: white;
   font-weight: bold;
 }
-.post-container > div:last-child .additional-info > .links *:hover:first-child {
+.post-container > section:last-child .additional-info > .links *:hover:nth-child(3n+1) {
   color: orange;
 }
-.post-container > div:last-child .additional-info > .links *:hover:last-child {
+.post-container > section:last-child .additional-info > .links *:hover:nth-child(3n+2) {
+  color: darkorchid;
+}
+.post-container > section:last-child .additional-info > .links *:hover:nth-child(3n+3) {
   color: cornflowerblue;
 }
-.post-container > div:last-child p {
+.post-container > section:last-child p {
   text-align: justify;
 }
 
