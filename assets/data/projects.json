@@ -156,5 +156,31 @@
             "footer": "null"
         },
         "desktop": "./assets/images/projects/DevelopGames/desktop.webp"
-    }
+    },
+    {
+     "id": 7,
+        "title": "Cocktailel. Cocktail ingredient guessing game",
+        "description": "This project was inspired by games such as Wordle, Rankdle and such. Users receive a daily cocktail to guess all its ingredients for a chance to win. Also, users can explore a large database of different alcoholic and non-alcoholic beverages and recipes for them.",
+        "links": [
+            {
+                "text": "Live Project",
+                "url": "https://overlydevoted.github.io/Cocktailel/"
+            },
+            {
+                "text": "Repository",
+                "url": "https://github.com/OverlyDevoted/Cocktailel"
+            }
+        ],
+        "languages": [
+            "HTML",
+            "CSS",
+            "JavaScript"
+        ],
+        "theme": {
+            "header": "null",
+            "body": "null",
+            "footer": "null"
+        },
+        "desktop": "./assets/images/projects/Cocktailel/optimized.webp"
+    }   
 ]
