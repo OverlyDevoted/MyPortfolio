@@ -1,186 +1,132 @@
 [
-    {
-        "id": 3,
-        "title": "League Stats 2023",
-        "description": "Created this static website as a practice for table elements. Page displays champion stats for LEAGUE OF LEGENDS World 23 championship.",
-        "links": [
-            {
-                "text": "Live project",
-                "url": "https://overlydevoted.github.io/LeagueStats/"
-            },
-            {
-                "text": "Repository",
-                "url": "https://github.com/OverlyDevoted/LeagueStats"
-            }
-        ],
-        "languages": [
-            "HTML",
-            "CSS"
-        ],
-        "theme": {
-            "header": "null",
-            "body": "null",
-            "footer": "null"
-        },
-        "desktop": "./assets/images/projects/LeagueStats/optimized.webp"
+  {
+    "id": 6,
+    "title": "2023 Game Awards",
+    "date": "1703066400",
+    "description": "A light-hearted page that tells the audience about my gaming experience in the year of 2023. This project was created only with HTML, CSS.",
+    "links": [
+      {
+        "text": "Live project",
+        "url": "https://overlydevoted.github.io/2023GameAwards/"
+      },
+      {
+        "text": "Repository",
+        "url": "https://github.com/OverlyDevoted/2023GameAwards"
+      }
+    ],
+    "languages": ["HTML", "CSS", "JavaScript"],
+    "theme": {
+      "header": "null",
+      "body": "null",
+      "footer": "null"
     },
-    {
-        "id": 1,
-        "title": "2023 Game Awards",
-        "description": "This is a creative HTML, CSS project for practicing flex boxes with an added theme of gaming. This is a light-hearted one page site where I list out my gaming achievements and some of my favorite games of the 2023.",
-        "links": [
-            {
-                "text": "Live project",
-                "url": "https://overlydevoted.github.io/2023GameAwards/"
-            },
-            {
-                "text": "Repository",
-                "url": "https://github.com/OverlyDevoted/2023GameAwards"
-            }
-        ],
-        "languages": [
-            "HTML",
-            "CSS",
-            "JavaScript"
-        ],
-        "theme": {
-            "header": "null",
-            "body": "null",
-            "footer": "null"
-        },
-        "desktop": "./assets/images/projects/GameAwards/optimized.webp"
+    "desktop": "./assets/images/projects/GameAwards/optimized.webp"
+  },
+  {
+    "id": 3,
+    "title": "Parallel Falling Sand Render Engine",
+    "date": "1684227600",
+    "description": "This was my bachelor's thesis project. I implemented a rendering engine using OpenGL and developed a GPU-parallelized falling sand cellular automata simulation with compute shaders. Additionally, I compared various performance metrics between the sequential and parallel algorithms.",
+    "links": [
+      {
+        "text": "Video showcase",
+        "url": "https://www.youtube.com/watch?v=VipiV5QAbz8"
+      },
+      {
+        "text": "Repository",
+        "url": "https://github.com/OverlyDevoted/FallingSandLearn"
+      }
+    ],
+    "languages": ["OpenGL", "GLSL", "C++"],
+    "theme": {
+      "header": "null",
+      "body": "null",
+      "footer": "null"
     },
-    {
-        "id": 2,
-        "title": "PortaNote",
-        "description": "Concept art page for an note taking web application. I take a lot of notes. Like a lot... It would be a huge life saver, if I had one place where I could go to write and store my notes.",
-        "links": [
-            {
-                "text": "Live project",
-                "url": "https://overlydevoted.github.io/PortaNote/"
-            },
-            {
-                "text": "Repository",
-                "url": "https://github.com/OverlyDevoted/PortaNote"
-            }
-        ],
-        "languages": [
-            "HTML",
-            "CSS",
-            "JavaScript"
-        ],
-        "theme": {
-            "header": "null",
-            "body": "null",
-            "footer": "null"
-        },
-        "desktop": "./assets/images/projects/PortaNote/optimized.webp"
+    "desktop": "./assets/images/projects/Bachelor/optimized.webp"
+  },
+  {
+    "id": 5,
+    "title": "Cocktailel. Cocktail ingredient guessing game",
+    "date": "1707213600",
+    "description": "This project was inspired by games like Wordle, Rankdle and such. Users can guess the ingredients of cocktail beverage each day they visit the site. I further utilized data provided by CocktailDB to create a page where users can explore a large database of different alcoholic and non-alcoholic beverages and recipes for them.",
+    "links": [
+      {
+        "text": "Live Project",
+        "url": "https://overlydevoted.github.io/Cocktailel/"
+      },
+      {
+        "text": "Repository",
+        "url": "https://github.com/OverlyDevoted/Cocktailel"
+      }
+    ],
+    "languages": ["HTML", "CSS", "JavaScript"],
+    "theme": {
+      "header": "null",
+      "body": "null",
+      "footer": "null"
     },
-    {
-        "id": 4,
-        "title": "Usecur",
-        "description": "This page was created as a practice for making a whole front-page using all the things I have learned about HTML and CSS. Page contains some simple animations, transitions and is responsive for different screen sizes. The theme for this one is cyber-security.",
-        "links": [
-            {
-                "text": "Live project",
-                "url": "https://overlydevoted.github.io/Usecur/"
-            },
-            {
-                "text": "Repository",
-                "url": "https://github.com/OverlyDevoted/Usecur"
-            }
-        ],
-        "languages": [
-            "HTML",
-            "CSS"
-        ],
-        "theme": {
-            "header": "null",
-            "body": "null",
-            "footer": "null"
-        },
-        "desktop": "./assets/images/projects/Usecur/desktop.webp"
+    "desktop": "./assets/images/projects/Cocktailel/optimized.webp"
+  },
+  {
+    "id": 4,
+    "title": "Slated. Clothing brand concept website",
+    "date": "1708336800",
+    "description": "This project was created for the JavaScript module final in my front-end course. The assignment was to develop a CRUD application for an e-commerce business without a backend. I created Slated, a website for selling smart-casual clothing. The page design aimed to reflect the smart-casual style, which combines formality and minimalism with a sense of coziness.",
+    "links": [
+      {
+        "text": "Repository",
+        "url": "https://github.com/OverlyDevoted/Slated"
+      }
+    ],
+    "languages": ["HTML", "SASS", "JavaScript"],
+    "theme": {
+      "header": "null",
+      "body": "null",
+      "footer": "null"
     },
-    {
-        "id": 5,
-        "title": "Parallel Falling Sand Render Engine",
-        "description": "This was my bachelor's thesis project. I implemented a rendering engine using OpenGL and implemented GPU parallelized falling sand celullar automata simulation which utilized compute shaders. Additionally, compared various performance metrics of sequential algorithm and parallel algorithm.",
-        "links": [
-            {
-                "text": "Video showcase",
-                "url": "https://www.youtube.com/watch?v=VipiV5QAbz8"
-            },
-            {
-                "text": "Repository",
-                "url": "https://github.com/OverlyDevoted/FallingSandLearn"
-            }
-        ],
-        "languages": [
-            "OpenGL",
-            "GLSL",
-            "C++"
-        ],
-        "theme": {
-            "header": "null",
-            "body": "null",
-            "footer": "null"
-        },
-        "desktop": "./assets/images/projects/Bachelor/optimized.webp"
+    "desktop": "./assets/images/projects/Slated/project.webp"
+  },
+  {
+    "id": 2,
+    "title": "CodeAcademy Student Forum",
+    "date": "1716886800",
+    "description": "This was my final project for the 1024 hour-long full-stack engineer course I took at CodeAcademy. For the final project I tasked with creating a forum-like website. I had the liberty to come up with the theme for the forum and the design. I decided to create a forum for CodeAcademy students, as I thought it was something the academy was missing. During the project I created a front-end and back-end apps. This project showcases all the skills I have acquired during the course.",
+    "links": [
+      {
+        "text": "Front-end repository",
+        "url": "https://github.com/OverlyDevoted/code-academy-forum"
+      },
+      {
+        "text": "Back-end repository",
+        "url": "https://github.com/OverlyDevoted/code-academy-forum-back"
+      }
+    ],
+    "languages": ["TS", "React"],
+    "theme": {
+      "header": "null",
+      "body": "null",
+      "footer": "null"
     },
-    {
-        "id": 6,
-        "title": "Develop.games Responsiveness Update",
-        "description": "This was a project by which I wanted to give back to Twitch streamer, developer, hacker Thor, PirateSoftware. His streams kept me company for some time now and on his streams he oftens mentions develop.games website. The website lacks responsiveness and some accessibility features which I tried to address and implemet during this project.",
-        "links": [
-            {
-                "text": "Original website",
-                "url": "https://develop.games/"
-            },
-            {
-                "text": "Check out Thor on Twitch",
-                "url": "https://www.twitch.tv/piratesoftware"
-            },
-            {
-                "text": "Repository",
-                "url": "https://github.com/OverlyDevoted/Responsive_Develop.games"
-            }
-        ],
-        "languages": [
-            "HTML",
-            "CSS",
-            "JavaScript"
-        ],
-        "theme": {
-            "header": "null",
-            "body": "null",
-            "footer": "null"
-        },
-        "desktop": "./assets/images/projects/DevelopGames/desktop.webp"
+    "desktop": "./assets/images/projects/CodeAcademyForum/project.webp"
+  },
+  {
+    "id": 1,
+    "title": "Lunch App",
+    "date": "1716886800",
+    "description": "I worked collaboratively with four others for three months on this project after being accepted into Sourcery Academy hosted by Cognizant. At the academy, I had a mentor who guided my team and me through the process of creating a front-end application. I learned contemporary front-end development practices used by the company and how projects are managed and executed at a professional level.",
+    "links": [
+      {
+        "text": "Repository",
+        "url": "https://github.com/OverlyDevoted/LunchApp"
+      }
+    ],
+    "languages": ["TS", "React"],
+    "theme": {
+      "header": "null",
+      "body": "null",
+      "footer": "null"
     },
-    {
-     "id": 7,
-        "title": "Cocktailel. Cocktail ingredient guessing game",
-        "description": "This project was inspired by games such as Wordle, Rankdle and such. Users receive a daily cocktail to guess all its ingredients for a chance to win. Also, users can explore a large database of different alcoholic and non-alcoholic beverages and recipes for them.",
-        "links": [
-            {
-                "text": "Live Project",
-                "url": "https://overlydevoted.github.io/Cocktailel/"
-            },
-            {
-                "text": "Repository",
-                "url": "https://github.com/OverlyDevoted/Cocktailel"
-            }
-        ],
-        "languages": [
-            "HTML",
-            "CSS",
-            "JavaScript"
-        ],
-        "theme": {
-            "header": "null",
-            "body": "null",
-            "footer": "null"
-        },
-        "desktop": "./assets/images/projects/Cocktailel/optimized.webp"
-    }   
+    "desktop": "./assets/images/projects/LunchApp/project.webp"
+  }
 ]

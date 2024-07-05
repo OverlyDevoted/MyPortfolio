@@ -1,151 +1,151 @@
 @use "./../variables";
 
 :root {
-    --first-fade-in-timer: 1500ms;
-    --default-fade-in-timer: 750ms;
-    --fade-in-timer: var(--first-fade-in-timer);
+  --first-fade-in-timer: 1500ms;
+  --default-fade-in-timer: 750ms;
+  --fade-in-timer: var(--first-fade-in-timer);
 }
 
 $fade-in-timer: var(--fade-in-timer);
 $offset: 400px;
 
 @mixin defaultPos($tag) {
-    #{$tag} {
-        transition-property: transform;
-        transition-duration: $fade-in-timer;
-        transform: translateY(0px);
-    }
+  #{$tag} {
+    transition-property: transform;
+    transition-duration: $fade-in-timer;
+    transform: translateY(0px);
+  }
 }
 
 @include defaultPos("h2");
+@include defaultPos("h3");
 @include defaultPos("p");
 @include defaultPos(".links");
 @include defaultPos(".languages");
 
 .preview-container {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 
-    &>.preview-desk {
-        transition-property: scale;
-        transition-duration: 300ms;
+  & > .preview-desk {
+    transition-property: scale;
+    transition-duration: 300ms;
 
-        width: 100%;
+    width: 100%;
 
-        @media only screen and (min-width: 750px) {
-            &:hover {
-                scale: 1.5;
-                z-index: 1;
-            }
-        }
+    @media only screen and (min-width: 750px) {
+      &:hover {
+        scale: 1.5;
+        z-index: 1;
+      }
     }
+  }
 }
 
 .post-container {
-    max-width: 750px;
-    width: 100%;
-    margin: 0 auto;
+  max-width: 750px;
+  width: 100%;
+  margin: 0 auto;
 
-    transition-property: opacity, transform;
-    transition-duration: $fade-in-timer;
+  transition-property: opacity, transform;
+  transition-duration: $fade-in-timer;
 
-    &>section:last-child {
-
-        @media only screen and (max-width: 750px) {
-            padding: 1em;
-        }
-
-        & .additional-info {
-            margin-top: 2em;
-            display: flex;
-            justify-content: space-between;
-
-            &>.languages {
-                display: flex;
-                flex-wrap: wrap;
-                width: 15%;
-                justify-content: end;
-                align-content: center;
-                @include variables.color-lang("javascript");
-                @include variables.color-lang("css");
-                @include variables.color-lang("c");
-                @include variables.color-lang("node");
-                @include variables.color-lang("sass");
-                @include variables.color-lang("html");
-                @include variables.color-lang("opengl");
-                @include variables.color-lang("glsl");
-            }
-
-            &>.links * {
-                display: block;
-                text-align: left;
-                text-decoration: underline;
-                color: white;
-                font-weight: bold;
-
-                &:hover:nth-child(3n+1) {
-                    color: orange;
-                }
-
-                &:hover:nth-child(3n+2) {
-                    color: darkorchid;
-                }
-
-                &:hover:nth-child(3n+3) {
-                    color: cornflowerblue;
-                }
-            }
-        }
-
-        & p {
-            text-align: justify;
-        }
+  & > section:last-child {
+    @media only screen and (max-width: 750px) {
+      padding: 1em;
     }
+
+    & .additional-info {
+      margin-top: 2em;
+      display: flex;
+      justify-content: space-between;
+
+      & > .languages {
+        display: flex;
+        flex-wrap: wrap;
+        width: 15%;
+        justify-content: end;
+        align-content: center;
+        @include variables.color-lang("javascript");
+        @include variables.color-lang("css");
+        @include variables.color-lang("c");
+        @include variables.color-lang("node");
+        @include variables.color-lang("sass");
+        @include variables.color-lang("html");
+        @include variables.color-lang("opengl");
+        @include variables.color-lang("glsl");
+        @include variables.color-lang("ts");
+        @include variables.color-lang("react");
+      }
+
+      & > .links * {
+        display: block;
+        text-align: left;
+        text-decoration: underline;
+        color: white;
+        font-weight: bold;
+
+        &:hover:nth-child(3n + 1) {
+          color: orange;
+        }
+
+        &:hover:nth-child(3n + 2) {
+          color: darkorchid;
+        }
+
+        &:hover:nth-child(3n + 3) {
+          color: cornflowerblue;
+        }
+      }
+    }
+
+    & p {
+      text-align: justify;
+    }
+  }
 }
 
 .first {
-    opacity: 0;
+  opacity: 0;
 
-    h2 {
-        transform: translateY(-100px);
-    }
+  h2,
+  h3 {
+    transform: translateY(-100px);
+  }
 
-    p {
-        transform: translateY(100px);
-    }
+  p {
+    transform: translateY(100px);
+  }
 
-    .links {
-        transform: translateX(-50px);
-    }
+  .links {
+    transform: translateX(-50px);
+  }
 
-    .languages {
-        transform: translateX(50px);
-    }
-
-    // &>.preview-container {
-    // }
+  .languages {
+    transform: translateX(50px);
+  }
 }
 
 .default-pos {
-    transform: translate(0);
+  transform: translate(0);
 }
 
 .right-fade-out {
-    transform: translateX($offset * -1);
-    opacity: 0;
+  transform: translateX($offset * -1);
+  opacity: 0;
 }
 
 .left-fade-out {
-    transform: translateX($offset);
-    opacity: 0;
+  transform: translateX($offset);
+  opacity: 0;
 }
 
 .right-fade-in {
-    transform: translateX($offset);
-    opacity: 0;
+  transform: translateX($offset);
+  opacity: 0;
 }
 
 .left-fade-in {
-    transform: translateX($offset * -1);
-    opacity: 0;
+  transform: translateX($offset * -1);
+  opacity: 0;
 }

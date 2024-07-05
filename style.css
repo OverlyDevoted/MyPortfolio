@@ -15,6 +15,12 @@ h2 {
   transform: translateY(0px);
 }
 
+h3 {
+  transition-property: transform;
+  transition-duration: var(--fade-in-timer);
+  transform: translateY(0px);
+}
+
 p {
   transition-property: transform;
   transition-duration: var(--fade-in-timer);
@@ -74,7 +80,7 @@ p {
   align-content: center;
 }
 .post-container > section:last-child .additional-info > .languages .javascript-lang {
-  background-color: #F0DB4F;
+  background-color: #f0db4f;
   color: #323330;
   font-weight: bold;
   height: -moz-fit-content;
@@ -102,8 +108,8 @@ p {
   height: fit-content;
 }
 .post-container > section:last-child .additional-info > .languages .sass-lang {
-  background-color: #F7F7F7;
-  color: #C3548C;
+  background-color: #f7f7f7;
+  color: #c3548c;
   font-weight: bold;
   height: -moz-fit-content;
   height: fit-content;
@@ -117,7 +123,7 @@ p {
 }
 .post-container > section:last-child .additional-info > .languages .opengl-lang {
   background-color: #f18407;
-  color: #F7F7F7;
+  color: #f7f7f7;
   font-weight: bold;
   height: -moz-fit-content;
   height: fit-content;
@@ -125,6 +131,20 @@ p {
 .post-container > section:last-child .additional-info > .languages .glsl-lang {
   background-color: #fff;
   color: rgba(211, 16, 16, 0.8705882353);
+  font-weight: bold;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.post-container > section:last-child .additional-info > .languages .ts-lang {
+  background-color: #377cc8;
+  color: #fffeff;
+  font-weight: bold;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.post-container > section:last-child .additional-info > .languages .react-lang {
+  background-color: #2f333b;
+  color: #2de0fd;
   font-weight: bold;
   height: -moz-fit-content;
   height: fit-content;
@@ -152,7 +172,8 @@ p {
 .first {
   opacity: 0;
 }
-.first h2 {
+.first h2,
+.first h3 {
   transform: translateY(-100px);
 }
 .first p {
